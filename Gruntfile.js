@@ -175,8 +175,19 @@ module.exports = function ( grunt ) {
             expand: true
           }
         ]
+      },
+      compile_vendorfonts: {
+        files: [
+          {
+            src: [ '<%= vendor_files.fonts %>' ],
+            dest: '<%= compile_dir %>/fonts',
+            cwd: '.',
+            expand: true,
+            flatten: true
+          }
+        ]
       }
-    },
+   },
 
     /**
      * `grunt concat` concatenates multiple source files into a single file.
@@ -598,7 +609,8 @@ module.exports = function ( grunt ) {
    * minifying your code.
    */
   grunt.registerTask( 'compile', [
-    'less:compile', 'copy:compile_assets', 'ngAnnotate', 'concat:compile_js', 'uglify', 'index:compile'
+      'less:compile', 'copy:compile_assets', 'copy:compile_vendorfonts',
+      'ngAnnotate', 'concat:compile_js',  'uglify', 'index:compile'
   ]);
 
   /**
