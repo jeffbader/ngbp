@@ -14,6 +14,7 @@
                 views: {
                     'main': {
                         controller: 'HomeController',
+                        controllerAs: 'vm',
                         templateUrl: 'views/home/home.tpl.html'
                     }
                 },

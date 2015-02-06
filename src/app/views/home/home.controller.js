@@ -5,7 +5,7 @@
 		.module( 'app.views.home.controller', [])
 		.controller( 'HomeController', HomeController);
 		
-		function HomeController( $scope ) {
+		function HomeController( ) {
 		}
 		
 })();
