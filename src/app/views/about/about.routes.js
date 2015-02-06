@@ -11,6 +11,7 @@
             views: {
                 'main': {
                     controller: 'AboutController',
+                    controllerAs: 'vm',
                     templateUrl: 'views/about/about.tpl.html'
                 }
             },
