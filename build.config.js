@@ -69,8 +69,17 @@ module.exports = {
       'vendor/angular-ui-utils/modules/route/route.js'
     ],
     css: [
+       'vendor/font-awesome/css/font-awesome.min.css'
     ],
     assets: [
+    ],
+    fonts: [
+        'vendor/font-awesome/fonts/fontawesome-webfont.eot',
+        'vendor/font-awesome/fonts/fontawesome-webfont.svg',
+        'vendor/font-awesome/fonts/fontawesome-webfont.ttf',
+        'vendor/font-awesome/fonts/fontawesome-webfont.woff',
+        'vendor/font-awesome/fonts/fontawesome-webfont.woff2'
     ]
+
   },
 };
