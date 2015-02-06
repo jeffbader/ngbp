@@ -369,7 +369,7 @@ module.exports = function ( grunt ) {
      */
     karma: {
       options: {
-        configFile: '<%= build_dir %>/karma-unit.js'
+        configFile: '<%= test_dir %>/karma-unit.js'
       },
       unit: {
         port: 9019,
@@ -425,7 +425,7 @@ module.exports = function ( grunt ) {
      */
     karmaconfig: {
       unit: {
-        dir: '<%= build_dir %>',
+        dir: '<%= test_dir %>',
         src: [ 
           '<%= vendor_files.js %>',
           '<%= html2js.app.dest %>',
@@ -655,7 +655,7 @@ module.exports = function ( grunt ) {
   grunt.registerMultiTask( 'karmaconfig', 'Process karma config templates', function () {
     var jsFiles = filterForJS( this.filesSrc );
     
-    grunt.file.copy( 'karma/karma-unit.tpl.js', grunt.config( 'build_dir' ) + '/karma-unit.js', { 
+    grunt.file.copy( 'karma/karma-unit.tpl.js', grunt.config( 'test_dir' ) + '/karma-unit.js', {
       process: function ( contents, path ) {
         return grunt.template.process( contents, {
           data: {

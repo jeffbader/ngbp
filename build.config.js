@@ -8,6 +8,7 @@ module.exports = {
    * completely built.
    */
   build_dir: 'build',
+  test_dir: 'test',
   compile_dir: 'bin',
 
   /**
